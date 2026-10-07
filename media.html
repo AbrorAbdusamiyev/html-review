@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimedia | HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>HTML Review: Multimedia</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="text.html">Text</a>
+      <a href="links.html">Links</a>
+      <a href="lists.html">Lists</a>
+      <a href="tables.html">Tables</a>
+      <a href="forms.html">Forms</a>
+      <a href="media.html" class="active">Media</a>
+      <a href="semantic.html">Semantic</a>
+      <a href="metadata.html">Metadata</a>
+    </nav>
+  </header>
+  <main>
+    <p class="intro">Tags that embed rich content.</p>
+    <section class="tag">
+      <h2>&lt;picture&gt; and &lt;source&gt;</h2>
+      <h3>Definition</h3>
+      <p>Lets the browser choose between several images.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>srcset</td><td>Image file(s) for the source</td></tr>
+        <tr><td>media</td><td>Condition, e.g. (min-width: 600px)</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;picture&gt;
+  &lt;source srcset="images/logo.svg" media="(min-width: 600px)"&gt;
+  &lt;img src="images/logo.svg" alt="Logo"&gt;
+&lt;/picture&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><picture><source srcset="images/logo.svg" media="(min-width: 600px)"><img src="images/logo.svg" alt="Logo"></picture></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;iframe&gt;</h2>
+      <h3>Definition</h3>
+      <p>Embeds another web page inside this page.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>src</td><td>URL of the embedded page</td></tr>
+        <tr><td>width</td><td>Width</td></tr>
+        <tr><td>height</td><td>Height</td></tr>
+        <tr><td>title</td><td>Description for accessibility</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;iframe src="index.html" width="400" height="150" title="Home page"&gt;&lt;/iframe&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><iframe src="index.html" width="400" height="150" title="Home page"></iframe></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;canvas&gt;</h2>
+      <h3>Definition</h3>
+      <p>Area for drawing graphics with JavaScript.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>width</td><td>Canvas width</td></tr>
+        <tr><td>height</td><td>Canvas height</td></tr>
+        <tr><td>id</td><td>Used by JavaScript to find it</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;canvas id="c" width="200" height="60"&gt;&lt;/canvas&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><canvas id="c" width="200" height="60"></canvas></div>
+    </section>
+  </main>
+  <footer>
+    <p>Lab work 3 | Project by Student 1 and Student 2 | Amity Tashkent</p>
+  </footer>
+</body>
+</html>

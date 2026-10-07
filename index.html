@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home & Page Structure | HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>HTML Review: Home & Page Structure</h1>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="text.html">Text</a>
+      <a href="links.html">Links</a>
+      <a href="lists.html">Lists</a>
+      <a href="tables.html">Tables</a>
+      <a href="forms.html">Forms</a>
+      <a href="media.html">Media</a>
+      <a href="semantic.html">Semantic</a>
+      <a href="metadata.html">Metadata</a>
+    </nav>
+  </header>
+  <main>
+    <p class="intro">Review of the main HTML tags: definition, attributes and examples.</p>
+    <section class="tag">
+      <h2>&lt;!DOCTYPE html&gt;</h2>
+      <h3>Definition</h3>
+      <p>Declares that the document uses HTML5. It must be the first line.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>html</td><td>Document type: HTML5</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result">This page starts with this declaration.</div>
+    </section>
+    <section class="tag">
+      <h2>&lt;html&gt;</h2>
+      <h3>Definition</h3>
+      <p>Root element that wraps the whole page.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>lang</td><td>Language of the page, e.g. en</td></tr>
+        <tr><td>dir</td><td>Text direction: ltr or rtl</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;html lang="en"&gt;
+  ...
+&lt;/html&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result">The whole page is inside &lt;html&gt;.</div>
+    </section>
+    <section class="tag">
+      <h2>&lt;head&gt;</h2>
+      <h3>Definition</h3>
+      <p>Container for information about the page (title, meta, CSS link). It is not displayed.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>(none)</td><td>Uses only global attributes</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;head&gt;
+  &lt;title&gt;My page&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result">Look at the browser tab: the title comes from &lt;head&gt;.</div>
+    </section>
+    <section class="tag">
+      <h2>&lt;body&gt;</h2>
+      <h3>Definition</h3>
+      <p>Contains everything visible: text, images, links, tables.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>class</td><td>CSS class name</td></tr>
+        <tr><td>id</td><td>Unique identifier</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;body&gt;
+  &lt;h1&gt;Hello&lt;/h1&gt;
+&lt;/body&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><strong>Hello</strong> (all visible content is in &lt;body&gt;)</div>
+    </section>
+  </main>
+  <footer>
+    <p>Lab work 3 | Project by Student 1 and Student 2 | Amity Tashkent</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links, Images, Video, Audio | HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>HTML Review: Links, Images, Video, Audio</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="text.html">Text</a>
+      <a href="links.html" class="active">Links</a>
+      <a href="lists.html">Lists</a>
+      <a href="tables.html">Tables</a>
+      <a href="forms.html">Forms</a>
+      <a href="media.html">Media</a>
+      <a href="semantic.html">Semantic</a>
+      <a href="metadata.html">Metadata</a>
+    </nav>
+  </header>
+  <main>
+    <p class="intro">Tags that connect pages and embed files.</p>
+    <section class="tag">
+      <h2>&lt;a&gt;</h2>
+      <h3>Definition</h3>
+      <p>Creates a hyperlink to another page, file or website.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>href</td><td>Destination URL</td></tr>
+        <tr><td>target</td><td>_blank opens a new tab</td></tr>
+        <tr><td>title</td><td>Tooltip</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;a href="index.html"&gt;Go Home&lt;/a&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><a href="index.html">Go Home</a></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;img&gt;</h2>
+      <h3>Definition</h3>
+      <p>Displays an image.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>src</td><td>Path of the image</td></tr>
+        <tr><td>alt</td><td>Alternative text</td></tr>
+        <tr><td>width</td><td>Width in pixels</td></tr>
+        <tr><td>height</td><td>Height in pixels</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;img src="images/logo.svg" alt="Logo" width="160"&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><img src="images/logo.svg" alt="Logo" width="160"></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;video&gt;</h2>
+      <h3>Definition</h3>
+      <p>Embeds a video player.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>src</td><td>Path of the video file</td></tr>
+        <tr><td>controls</td><td>Shows play/pause buttons</td></tr>
+        <tr><td>width</td><td>Player width</td></tr>
+        <tr><td>poster</td><td>Image shown before playing</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;video src="images/sample.mp4" controls width="300"&gt;&lt;/video&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><video src="images/sample.mp4" controls width="300"></video></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;audio&gt;</h2>
+      <h3>Definition</h3>
+      <p>Embeds a sound player.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>src</td><td>Path of the audio file</td></tr>
+        <tr><td>controls</td><td>Shows the player controls</td></tr>
+        <tr><td>loop</td><td>Repeats the audio</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;audio src="images/sample.mp3" controls&gt;&lt;/audio&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><audio src="images/sample.mp3" controls></audio></div>
+    </section>
+  </main>
+  <footer>
+    <p>Lab work 3 | Project by Student 1 and Student 2 | Amity Tashkent</p>
+  </footer>
+</body>
+</html>

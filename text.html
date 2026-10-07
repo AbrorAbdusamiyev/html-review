@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Formatting Tags | HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>HTML Review: Text Formatting Tags</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="text.html" class="active">Text</a>
+      <a href="links.html">Links</a>
+      <a href="lists.html">Lists</a>
+      <a href="tables.html">Tables</a>
+      <a href="forms.html">Forms</a>
+      <a href="media.html">Media</a>
+      <a href="semantic.html">Semantic</a>
+      <a href="metadata.html">Metadata</a>
+    </nav>
+  </header>
+  <main>
+    <p class="intro">Tags that structure and format text.</p>
+    <section class="tag">
+      <h2>&lt;h1&gt; – &lt;h6&gt;</h2>
+      <h3>Definition</h3>
+      <p>Headings from the most important (h1) to the least important (h6).</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>id</td><td>Anchor target for links</td></tr>
+        <tr><td>class</td><td>CSS class</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;h1&gt;Title&lt;/h1&gt;
+&lt;h2&gt;Subtitle&lt;/h2&gt;
+&lt;h3&gt;Section&lt;/h3&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><h1>Title</h1><h2>Subtitle</h2><h3>Section</h3></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;p&gt;</h2>
+      <h3>Definition</h3>
+      <p>Defines a paragraph of text.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>class</td><td>CSS class</td></tr>
+        <tr><td>title</td><td>Tooltip on hover</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;p title="Info"&gt;A paragraph.&lt;/p&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><p title="Info">A paragraph.</p></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;strong&gt; and &lt;em&gt;</h2>
+      <h3>Definition</h3>
+      <p>strong = important text (bold). em = emphasized text (italic).</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>class</td><td>CSS class</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt; and &lt;em&gt;stressed&lt;/em&gt;.&lt;/p&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><p><strong>Important</strong> and <em>stressed</em>.</p></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;br&gt; and &lt;hr&gt;</h2>
+      <h3>Definition</h3>
+      <p>br = line break. hr = horizontal line between topics.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>(none)</td><td>Void tags: no closing tag</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>Line 1&lt;br&gt;Line 2
+&lt;hr&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result">Line 1<br>Line 2<hr></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;blockquote&gt;</h2>
+      <h3>Definition</h3>
+      <p>A long quotation from another source.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>cite</td><td>URL of the quote's source</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;blockquote cite="https://example.com"&gt;A quote.&lt;/blockquote&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><blockquote cite="https://example.com">A quote.</blockquote></div>
+    </section>
+  </main>
+  <footer>
+    <p>Lab work 3 | Project by Student 1 and Student 2 | Amity Tashkent</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tables | HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>HTML Review: Tables</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="text.html">Text</a>
+      <a href="links.html">Links</a>
+      <a href="lists.html">Lists</a>
+      <a href="tables.html" class="active">Tables</a>
+      <a href="forms.html">Forms</a>
+      <a href="media.html">Media</a>
+      <a href="semantic.html">Semantic</a>
+      <a href="metadata.html">Metadata</a>
+    </nav>
+  </header>
+  <main>
+    <p class="intro">Tags that display data in rows and columns.</p>
+    <section class="tag">
+      <h2>&lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</h2>
+      <h3>Definition</h3>
+      <p>table = the table, tr = row, th = header cell, td = data cell.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>border</td><td>Border width (old style)</td></tr>
+        <tr><td>class</td><td>CSS class</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;Tag&lt;/th&gt;&lt;th&gt;Role&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;p&lt;/td&gt;&lt;td&gt;Paragraph&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><table><tr><th>Tag</th><th>Role</th></tr><tr><td>p</td><td>Paragraph</td></tr></table></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;caption&gt;</h2>
+      <h3>Definition</h3>
+      <p>Title of a table.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>(none)</td><td>Only global attributes</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;table&gt;
+  &lt;caption&gt;Tags&lt;/caption&gt;
+  &lt;tr&gt;&lt;td&gt;a&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><table><caption>Tags</caption><tr><td>a</td></tr></table></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;</h2>
+      <h3>Definition</h3>
+      <p>Group the header, body and footer rows.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>(none)</td><td>Only global attributes</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;table&gt;
+  &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Item&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+  &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Pen&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;
+  &lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;Total: 1&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><table><thead><tr><th>Item</th></tr></thead><tbody><tr><td>Pen</td></tr></tbody><tfoot><tr><td>Total: 1</td></tr></tfoot></table></div>
+    </section>
+    <section class="tag">
+      <h2>colspan and rowspan</h2>
+      <h3>Definition</h3>
+      <p>Attributes of th/td that merge cells.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>colspan</td><td>Number of columns to merge</td></tr>
+        <tr><td>rowspan</td><td>Number of rows to merge</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;table&gt;
+  &lt;tr&gt;&lt;th colspan="2"&gt;Merged&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><table><tr><th colspan="2">Merged</th></tr><tr><td>A</td><td>B</td></tr></table></div>
+    </section>
+  </main>
+  <footer>
+    <p>Lab work 3 | Project by Student 1 and Student 2 | Amity Tashkent</p>
+  </footer>
+</body>
+</html>

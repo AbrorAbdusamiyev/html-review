@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantic and Layout Tags | HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>HTML Review: Semantic and Layout Tags</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="text.html">Text</a>
+      <a href="links.html">Links</a>
+      <a href="lists.html">Lists</a>
+      <a href="tables.html">Tables</a>
+      <a href="forms.html">Forms</a>
+      <a href="media.html">Media</a>
+      <a href="semantic.html" class="active">Semantic</a>
+      <a href="metadata.html">Metadata</a>
+    </nav>
+  </header>
+  <main>
+    <p class="intro">Tags that give meaning to the parts of a page.</p>
+    <section class="tag">
+      <h2>&lt;header&gt; and &lt;footer&gt;</h2>
+      <h3>Definition</h3>
+      <p>header = top of a page or section. footer = bottom (author, copyright).</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>class</td><td>CSS class</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;header&gt;Top&lt;/header&gt;
+&lt;footer&gt;Bottom&lt;/footer&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><header>Top</header><footer>Bottom</footer></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;nav&gt;</h2>
+      <h3>Definition</h3>
+      <p>Group of navigation links.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>aria-label</td><td>Describes the menu for screen readers</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;nav&gt;
+  &lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><nav><a href="index.html">Home</a></nav></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;main&gt;</h2>
+      <h3>Definition</h3>
+      <p>The main content of the page. Use only one per page.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>(none)</td><td>Only global attributes</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;main&gt;Content&lt;/main&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><main>Content</main></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;section&gt; and &lt;article&gt;</h2>
+      <h3>Definition</h3>
+      <p>section = thematic group. article = independent content (post, news).</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>id</td><td>Anchor target</td></tr>
+        <tr><td>class</td><td>CSS class</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;section&gt;
+  &lt;article&gt;Post&lt;/article&gt;
+&lt;/section&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><section><article>Post</article></section></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;aside&gt;</h2>
+      <h3>Definition</h3>
+      <p>Side content related to the main text.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>class</td><td>CSS class</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;aside&gt;Side note&lt;/aside&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><aside>Side note</aside></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;figure&gt; and &lt;figcaption&gt;</h2>
+      <h3>Definition</h3>
+      <p>figure groups media; figcaption is its caption.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>(none)</td><td>Only global attributes</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;figure&gt;
+  &lt;img src="images/logo.svg" alt="Logo" width="120"&gt;
+  &lt;figcaption&gt;Our logo&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><figure><img src="images/logo.svg" alt="Logo" width="120"><figcaption>Our logo</figcaption></figure></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;div&gt; and &lt;span&gt;</h2>
+      <h3>Definition</h3>
+      <p>div = generic block container. span = generic inline container.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>class</td><td>CSS class</td></tr>
+        <tr><td>id</td><td>Unique identifier</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;div class="box"&gt;Block&lt;/div&gt;
+&lt;span&gt;inline&lt;/span&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><div class="box">Block</div> <span>inline</span></div>
+    </section>
+  </main>
+  <footer>
+    <p>Lab work 3 | Project by Student 1 and Student 2 | Amity Tashkent</p>
+  </footer>
+</body>
+</html>

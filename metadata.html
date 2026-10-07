@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metadata | HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>HTML Review: Metadata</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="text.html">Text</a>
+      <a href="links.html">Links</a>
+      <a href="lists.html">Lists</a>
+      <a href="tables.html">Tables</a>
+      <a href="forms.html">Forms</a>
+      <a href="media.html">Media</a>
+      <a href="semantic.html">Semantic</a>
+      <a href="metadata.html" class="active">Metadata</a>
+    </nav>
+  </header>
+  <main>
+    <p class="intro">Tags placed in head that describe the page.</p>
+    <section class="tag">
+      <h2>&lt;title&gt;</h2>
+      <h3>Definition</h3>
+      <p>Sets the page title shown in the browser tab.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>(none)</td><td>Only global attributes</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;title&gt;HTML Review&lt;/title&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result">See the browser tab.</div>
+    </section>
+    <section class="tag">
+      <h2>&lt;meta&gt;</h2>
+      <h3>Definition</h3>
+      <p>Gives information about the page: encoding, description, viewport.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>charset</td><td>Character encoding, e.g. UTF-8</td></tr>
+        <tr><td>name</td><td>Type of metadata (description, viewport)</td></tr>
+        <tr><td>content</td><td>Value of the metadata</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;meta charset="UTF-8"&gt;
+&lt;meta name="description" content="HTML review"&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result">Not visible: used by browsers and search engines.</div>
+    </section>
+    <section class="tag">
+      <h2>&lt;link&gt;</h2>
+      <h3>Definition</h3>
+      <p>Links the page to an external resource, usually a CSS file.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>rel</td><td>Relationship, e.g. stylesheet</td></tr>
+        <tr><td>href</td><td>Path of the file</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;link rel="stylesheet" href="css/style.css"&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result">This page's design comes from style.css.</div>
+    </section>
+    <section class="tag">
+      <h2>&lt;script&gt;</h2>
+      <h3>Definition</h3>
+      <p>Embeds or links JavaScript code.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>src</td><td>Path of the script file</td></tr>
+        <tr><td>defer</td><td>Runs the script after the page is parsed</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;script src="app.js" defer&gt;&lt;/script&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result">Not visible: runs in the background.</div>
+    </section>
+  </main>
+  <footer>
+    <p>Lab work 3 | Project by Student 1 and Student 2 | Amity Tashkent</p>
+  </footer>
+</body>
+</html>

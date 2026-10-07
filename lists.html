@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lists | HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>HTML Review: Lists</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="text.html">Text</a>
+      <a href="links.html">Links</a>
+      <a href="lists.html" class="active">Lists</a>
+      <a href="tables.html">Tables</a>
+      <a href="forms.html">Forms</a>
+      <a href="media.html">Media</a>
+      <a href="semantic.html">Semantic</a>
+      <a href="metadata.html">Metadata</a>
+    </nav>
+  </header>
+  <main>
+    <p class="intro">Tags that group items.</p>
+    <section class="tag">
+      <h2>&lt;ul&gt;</h2>
+      <h3>Definition</h3>
+      <p>Unordered (bulleted) list.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>class</td><td>CSS class</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><ul><li>HTML</li><li>CSS</li></ul></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;ol&gt;</h2>
+      <h3>Definition</h3>
+      <p>Ordered (numbered) list.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>type</td><td>Numbering style: 1, a, A, i, I</td></tr>
+        <tr><td>start</td><td>First number</td></tr>
+        <tr><td>reversed</td><td>Counts down</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;ol type="A" start="3"&gt;
+  &lt;li&gt;Plan&lt;/li&gt;
+  &lt;li&gt;Code&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><ol type="A" start="3"><li>Plan</li><li>Code</li></ol></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;li&gt;</h2>
+      <h3>Definition</h3>
+      <p>One item inside ul or ol.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>value</td><td>Number of the item (in ol)</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;li&gt;Item&lt;/li&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><ul><li>Item</li></ul></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;</h2>
+      <h3>Definition</h3>
+      <p>Description list: dt = term, dd = its description.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>(none)</td><td>Only global attributes</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;Page structure&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><dl><dt>HTML</dt><dd>Page structure</dd></dl></div>
+    </section>
+  </main>
+  <footer>
+    <p>Lab work 3 | Project by Student 1 and Student 2 | Amity Tashkent</p>
+  </footer>
+</body>
+</html>

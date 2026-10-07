@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms | HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>HTML Review: Forms</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="text.html">Text</a>
+      <a href="links.html">Links</a>
+      <a href="lists.html">Lists</a>
+      <a href="tables.html">Tables</a>
+      <a href="forms.html" class="active">Forms</a>
+      <a href="media.html">Media</a>
+      <a href="semantic.html">Semantic</a>
+      <a href="metadata.html">Metadata</a>
+    </nav>
+  </header>
+  <main>
+    <p class="intro">Tags that collect data from the user.</p>
+    <section class="tag">
+      <h2>&lt;form&gt;</h2>
+      <h3>Definition</h3>
+      <p>Container for form controls.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>action</td><td>Where the data is sent</td></tr>
+        <tr><td>method</td><td>get or post</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;form action="#" method="post"&gt;
+  ...
+&lt;/form&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result">See the examples below.</div>
+    </section>
+    <section class="tag">
+      <h2>&lt;label&gt; and &lt;input&gt;</h2>
+      <h3>Definition</h3>
+      <p>label = text for a field. input = a field; its type changes the control.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>type</td><td>text, email, password, checkbox, radio, number, date</td></tr>
+        <tr><td>name</td><td>Name of the data</td></tr>
+        <tr><td>id</td><td>Links the input to its label (for)</td></tr>
+        <tr><td>placeholder</td><td>Hint text</td></tr>
+        <tr><td>required</td><td>Field must be filled</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;label for="n"&gt;Name:&lt;/label&gt;
+&lt;input type="text" id="n" name="name" placeholder="Your name" required&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><label for="n">Name:</label> <input type="text" id="n" name="name" placeholder="Your name" required></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;select&gt; and &lt;option&gt;</h2>
+      <h3>Definition</h3>
+      <p>Drop-down list; each option is one choice.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>name</td><td>Name of the data</td></tr>
+        <tr><td>value</td><td>Value sent for an option</td></tr>
+        <tr><td>selected</td><td>Option chosen by default</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;select name="lang"&gt;
+  &lt;option value="en"&gt;English&lt;/option&gt;
+  &lt;option value="ru" selected&gt;Russian&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><select name="lang"><option value="en">English</option><option value="ru" selected>Russian</option></select></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;textarea&gt;</h2>
+      <h3>Definition</h3>
+      <p>Multi-line text field.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>rows</td><td>Visible lines</td></tr>
+        <tr><td>cols</td><td>Visible width in characters</td></tr>
+        <tr><td>name</td><td>Name of the data</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;textarea name="msg" rows="3" cols="30"&gt;&lt;/textarea&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><textarea name="msg" rows="3" cols="30"></textarea></div>
+    </section>
+    <section class="tag">
+      <h2>&lt;button&gt;</h2>
+      <h3>Definition</h3>
+      <p>A clickable button.</p>
+      <h3>Attributes</h3>
+      <table>
+        <tr><th>Attribute</th><th>Role</th></tr>
+        <tr><td>type</td><td>submit, reset or button</td></tr>
+        <tr><td>disabled</td><td>Turns the button off</td></tr>
+      </table>
+      <h3>Example (code)</h3>
+      <pre><code>&lt;button type="submit"&gt;Send&lt;/button&gt;</code></pre>
+      <h3>Example (result)</h3>
+      <div class="result"><button type="button">Send</button></div>
+    </section>
+  </main>
+  <footer>
+    <p>Lab work 3 | Project by Student 1 and Student 2 | Amity Tashkent</p>
+  </footer>
+</body>
+</html>
