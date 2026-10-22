@@ -3,93 +3,191 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home & Page Structure | HTML Review</title>
+  <meta name="description" content="HTML review website: Home &amp;amp; Page Structure">
+  <title>Home &amp;amp; Page Structure | HTML Review</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>HTML Review: Home & Page Structure</h1>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="text.html">Text</a>
-      <a href="links.html">Links</a>
-      <a href="lists.html">Lists</a>
-      <a href="tables.html">Tables</a>
-      <a href="forms.html">Forms</a>
-      <a href="media.html">Media</a>
-      <a href="semantic.html">Semantic</a>
-      <a href="metadata.html">Metadata</a>
-    </nav>
+  <header class="site-header">
+    <h1>HTML Review Website</h1>
+    <p>Main HTML tags: definition, attributes and examples</p>
   </header>
-  <main>
-    <p class="intro">Review of the main HTML tags: definition, attributes and examples.</p>
-    <section class="tag">
-      <h2>&lt;!DOCTYPE html&gt;</h2>
-      <h3>Definition</h3>
-      <p>Declares that the document uses HTML5. It must be the first line.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>html</td><td>Document type: HTML5</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result">This page starts with this declaration.</div>
+  <nav class="site-nav">
+    <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="text.html">Text</a></li>
+        <li><a href="links.html">Links</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="semantic.html">Semantic</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+    </ul>
+  </nav>
+  <main class="content">
+    <h2 class="page-title">Home &amp;amp; Page Structure</h2>
+    <p class="intro">Welcome! This website reviews the main HTML tags. Each page presents one family of tags with a <strong>Definition</strong>, an <strong>Attributes</strong> table and an <strong>Example</strong> shown as code and as a real result. This first page shows the structure of an HTML document.</p>
+    <section class="tag-block" id="doctype-html">
+      <h3 class="tag-name">&lt;!DOCTYPE html&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Declares that the document is HTML5, so the browser renders the page in standards mode. It must be the very first line of the file.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>(none)</td><td>This tag has no specific attributes; only global attributes such as <code>class</code> and <code>id</code> apply.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<p>The first line of every page in this website is <strong>&lt;!DOCTYPE html&gt;</strong>.</p>
+        </div>
+      </div>
     </section>
-    <section class="tag">
-      <h2>&lt;html&gt;</h2>
-      <h3>Definition</h3>
-      <p>Root element that wraps the whole page.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>lang</td><td>Language of the page, e.g. en</td></tr>
-        <tr><td>dir</td><td>Text direction: ltr or rtl</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;html lang="en"&gt;
+    <section class="tag-block" id="html">
+      <h3 class="tag-name">&lt;html&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>The root element of the page. All other elements are placed inside it.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>lang</code></td><td>Language of the page content (for example <code>en</code>), used by browsers and screen readers.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;html lang=&quot;en&quot;&gt;
   ...
 &lt;/html&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result">The whole page is inside &lt;html&gt;.</div>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<p>Every page here starts with <code>html lang="en"</code>.</p>
+        </div>
+      </div>
     </section>
-    <section class="tag">
-      <h2>&lt;head&gt;</h2>
-      <h3>Definition</h3>
-      <p>Container for information about the page (title, meta, CSS link). It is not displayed.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>(none)</td><td>Uses only global attributes</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;head&gt;
+    <section class="tag-block" id="head">
+      <h3 class="tag-name">&lt;head&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Container for information about the page that is not displayed directly: title, metadata, links to CSS files.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>(none)</td><td>This tag has no specific attributes; only global attributes such as <code>class</code> and <code>id</code> apply.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
   &lt;title&gt;My page&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
 &lt;/head&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result">Look at the browser tab: the title comes from &lt;head&gt;.</div>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<p>The head of this page contains the charset, the viewport, the title and the link to <code>css/style.css</code>. Use your browser's &quot;View page source&quot; to see it.</p>
+        </div>
+      </div>
     </section>
-    <section class="tag">
-      <h2>&lt;body&gt;</h2>
-      <h3>Definition</h3>
-      <p>Contains everything visible: text, images, links, tables.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>class</td><td>CSS class name</td></tr>
-        <tr><td>id</td><td>Unique identifier</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;body&gt;
+    <section class="tag-block" id="body">
+      <h3 class="tag-name">&lt;body&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Contains everything that is visible in the browser window: text, images, links, tables, forms.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>(none)</td><td>This tag has no specific attributes; only global attributes such as <code>class</code> and <code>id</code> apply.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;body&gt;
   &lt;h1&gt;Hello&lt;/h1&gt;
+  &lt;p&gt;Visible content.&lt;/p&gt;
 &lt;/body&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result"><strong>Hello</strong> (all visible content is in &lt;body&gt;)</div>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<p>Everything you see on this page is inside the body tag.</p>
+        </div>
+      </div>
     </section>
+    <section class="tag-block" id="header-nav-main-footer">
+      <h3 class="tag-name">&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>The basic skeleton shared by all pages of this website: a header with the site title, a navigation menu, the main content and a footer.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>(none)</td><td>This tag has no specific attributes; only global attributes such as <code>class</code> and <code>id</code> apply.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;header&gt;...&lt;/header&gt;
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;main&gt;...&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<p>Look at the top (header + menu) and the bottom (footer) of this page: they are identical on all 9 pages.</p>
+        </div>
+      </div>
+    </section>
+
   </main>
-  <footer>
-    <p>Lab work 3 | Project by Student 1 and Student 2 | Amity Tashkent</p>
+  <footer class="site-footer">
+    <p>&copy; 2026 HTML Review Project &ndash; Lab work 3, Amity University Tashkent</p>
   </footer>
 </body>
 </html>

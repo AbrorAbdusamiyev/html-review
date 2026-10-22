@@ -3,90 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML review website: Metadata">
   <title>Metadata | HTML Review</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>HTML Review: Metadata</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="text.html">Text</a>
-      <a href="links.html">Links</a>
-      <a href="lists.html">Lists</a>
-      <a href="tables.html">Tables</a>
-      <a href="forms.html">Forms</a>
-      <a href="media.html">Media</a>
-      <a href="semantic.html">Semantic</a>
-      <a href="metadata.html" class="active">Metadata</a>
-    </nav>
+  <header class="site-header">
+    <h1>HTML Review Website</h1>
+    <p>Main HTML tags: definition, attributes and examples</p>
   </header>
-  <main>
-    <p class="intro">Tags placed in head that describe the page.</p>
-    <section class="tag">
-      <h2>&lt;title&gt;</h2>
-      <h3>Definition</h3>
-      <p>Sets the page title shown in the browser tab.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>(none)</td><td>Only global attributes</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;title&gt;HTML Review&lt;/title&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result">See the browser tab.</div>
+  <nav class="site-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="text.html">Text</a></li>
+        <li><a href="links.html">Links</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="semantic.html">Semantic</a></li>
+        <li><a href="metadata.html" class="active">Metadata</a></li>
+    </ul>
+  </nav>
+  <main class="content">
+    <h2 class="page-title">Metadata</h2>
+    <p class="intro">Tags placed in the <code>head</code> of the page. They describe the document and are not displayed in the page body.</p>
+    <section class="tag-block" id="title">
+      <h3 class="tag-name">&lt;title&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Sets the title of the page shown in the browser tab and in search results. It goes in <code>head</code>.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes; the title text is written between the tags.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;title&gt;HTML Review | Home&lt;/title&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<p>Look at the browser tab: it shows the text of the <code>title</code> tag of this page.</p>
+        </div>
+      </div>
     </section>
-    <section class="tag">
-      <h2>&lt;meta&gt;</h2>
-      <h3>Definition</h3>
-      <p>Gives information about the page: encoding, description, viewport.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>charset</td><td>Character encoding, e.g. UTF-8</td></tr>
-        <tr><td>name</td><td>Type of metadata (description, viewport)</td></tr>
-        <tr><td>content</td><td>Value of the metadata</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;meta charset="UTF-8"&gt;
-&lt;meta name="description" content="HTML review"&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result">Not visible: used by browsers and search engines.</div>
+    <section class="tag-block" id="meta">
+      <h3 class="tag-name">&lt;meta&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Gives information about the document (character set, description, author, viewport). It is an empty tag placed in <code>head</code>.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>charset</code></td><td>Character encoding of the page, usually <code>UTF-8</code>.</td></tr>
+          <tr><td><code>name</code></td><td>Kind of information: <code>description</code>, <code>author</code>, <code>viewport</code>, <code>keywords</code>.</td></tr>
+          <tr><td><code>content</code></td><td>Value of the information named by <code>name</code>.</td></tr>
+          <tr><td><code>http-equiv</code></td><td>Simulates an HTTP header, for example <code>refresh</code>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;Review of the main HTML tags&quot;&gt;
+&lt;meta name=&quot;author&quot; content=&quot;Student names&quot;&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<p>Metadata is invisible. It is read by the browser and by search engines. Use &quot;View page source&quot; to see the meta tags of this page.</p>
+        </div>
+      </div>
     </section>
-    <section class="tag">
-      <h2>&lt;link&gt;</h2>
-      <h3>Definition</h3>
-      <p>Links the page to an external resource, usually a CSS file.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>rel</td><td>Relationship, e.g. stylesheet</td></tr>
-        <tr><td>href</td><td>Path of the file</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;link rel="stylesheet" href="css/style.css"&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result">This page's design comes from style.css.</div>
+    <section class="tag-block" id="link">
+      <h3 class="tag-name">&lt;link&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Connects the page to an external resource, most often a CSS file or an icon. Empty tag placed in <code>head</code>.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>rel</code></td><td>Relationship with the resource, for example <code>stylesheet</code> or <code>icon</code>.</td></tr>
+          <tr><td><code>href</code></td><td>Path or URL of the resource.</td></tr>
+          <tr><td><code>type</code></td><td>MIME type of the resource, for example <code>text/css</code>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<p>This is how every page of this website receives its style from <code>css/style.css</code>.</p>
+        </div>
+      </div>
     </section>
-    <section class="tag">
-      <h2>&lt;script&gt;</h2>
-      <h3>Definition</h3>
-      <p>Embeds or links JavaScript code.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>src</td><td>Path of the script file</td></tr>
-        <tr><td>defer</td><td>Runs the script after the page is parsed</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;script src="app.js" defer&gt;&lt;/script&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result">Not visible: runs in the background.</div>
+    <section class="tag-block" id="base">
+      <h3 class="tag-name">&lt;base&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Sets the base URL used for all relative links of the page. Only one <code>base</code> is allowed, in <code>head</code>.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>href</code></td><td>Base URL for all relative links.</td></tr>
+          <tr><td><code>target</code></td><td>Default target for all links, for example <code>_blank</code>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;base href=&quot;https://example.com/&quot; target=&quot;_blank&quot;&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<p>The base tag is shown only as code here, because using it on this page would break the relative links of the menu.</p>
+        </div>
+      </div>
     </section>
+    <section class="tag-block" id="script">
+      <h3 class="tag-name">&lt;script&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Inserts JavaScript code into the page, or links to an external JavaScript file.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>src</code></td><td>Path of an external JavaScript file.</td></tr>
+          <tr><td><code>defer</code></td><td>Runs the script after the page is parsed.</td></tr>
+          <tr><td><code>async</code></td><td>Loads the script without blocking the page.</td></tr>
+          <tr><td><code>type</code></td><td>Type of script, for example <code>module</code>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;script src=&quot;js/app.js&quot; defer&gt;&lt;/script&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<p>This website does not need JavaScript, so the tag is shown only as code.</p>
+        </div>
+      </div>
+    </section>
+    <section class="tag-block" id="noscript">
+      <h3 class="tag-name">&lt;noscript&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Content displayed only when the browser has JavaScript disabled.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;noscript&gt;Please enable JavaScript.&lt;/noscript&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<p>Nothing is displayed here as long as JavaScript is enabled in your browser.</p>
+        </div>
+      </div>
+    </section>
+
   </main>
-  <footer>
-    <p>Lab work 3 | Project by Student 1 and Student 2 | Amity Tashkent</p>
+  <footer class="site-footer">
+    <p>&copy; 2026 HTML Review Project &ndash; Lab work 3, Amity University Tashkent</p>
   </footer>
 </body>
 </html>

@@ -3,100 +3,229 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML review website: Tables">
   <title>Tables | HTML Review</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>HTML Review: Tables</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="text.html">Text</a>
-      <a href="links.html">Links</a>
-      <a href="lists.html">Lists</a>
-      <a href="tables.html" class="active">Tables</a>
-      <a href="forms.html">Forms</a>
-      <a href="media.html">Media</a>
-      <a href="semantic.html">Semantic</a>
-      <a href="metadata.html">Metadata</a>
-    </nav>
+  <header class="site-header">
+    <h1>HTML Review Website</h1>
+    <p>Main HTML tags: definition, attributes and examples</p>
   </header>
-  <main>
-    <p class="intro">Tags that display data in rows and columns.</p>
-    <section class="tag">
-      <h2>&lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</h2>
-      <h3>Definition</h3>
-      <p>table = the table, tr = row, th = header cell, td = data cell.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>border</td><td>Border width (old style)</td></tr>
-        <tr><td>class</td><td>CSS class</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;table&gt;
-  &lt;tr&gt;&lt;th&gt;Tag&lt;/th&gt;&lt;th&gt;Role&lt;/th&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;p&lt;/td&gt;&lt;td&gt;Paragraph&lt;/td&gt;&lt;/tr&gt;
+  <nav class="site-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="text.html">Text</a></li>
+        <li><a href="links.html">Links</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="tables.html" class="active">Tables</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="semantic.html">Semantic</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+    </ul>
+  </nav>
+  <main class="content">
+    <h2 class="page-title">Tables</h2>
+    <p class="intro">Tags used to display data in rows and columns. The tables on this website use the class <code>demo-table</code> and <code>attr-table</code> for their style.</p>
+    <section class="tag-block" id="table-tr-th-td">
+      <h3 class="tag-name">&lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p><code>table</code> creates a table; <code>tr</code> is a row; <code>th</code> is a header cell (bold and centered); <code>td</code> is a normal data cell.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>border</code></td><td>Old attribute for the border width; use CSS <code>border</code> instead.</td></tr>
+          <tr><td><code>colspan</code></td><td>Number of columns a cell spans.</td></tr>
+          <tr><td><code>rowspan</code></td><td>Number of rows a cell spans.</td></tr>
+          <tr><td><code>scope</code></td><td>On <code>th</code>: says if the header is for a <code>col</code> or a <code>row</code>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ali&lt;/td&gt;
+    &lt;td&gt;20&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Sara&lt;/td&gt;
+    &lt;td&gt;21&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;/table&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result"><table><tr><th>Tag</th><th>Role</th></tr><tr><td>p</td><td>Paragraph</td></tr></table></div>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<table class="demo-table">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Ali</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>Sara</td>
+    <td>21</td>
+  </tr>
+</table>
+        </div>
+      </div>
     </section>
-    <section class="tag">
-      <h2>&lt;caption&gt;</h2>
-      <h3>Definition</h3>
-      <p>Title of a table.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>(none)</td><td>Only global attributes</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;table&gt;
-  &lt;caption&gt;Tags&lt;/caption&gt;
-  &lt;tr&gt;&lt;td&gt;a&lt;/td&gt;&lt;/tr&gt;
+    <section class="tag-block" id="caption">
+      <h3 class="tag-name">&lt;caption&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Gives a title to the table. It must be the first child of <code>table</code>.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>(none)</code></td><td>No specific attributes; position is controlled with CSS <code>caption-side</code>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;table&gt;
+  &lt;caption&gt;Student list&lt;/caption&gt;
+  &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Group&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Ali&lt;/td&gt;&lt;td&gt;A1&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result"><table><caption>Tags</caption><tr><td>a</td></tr></table></div>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<table class="demo-table">
+  <caption>Student list</caption>
+  <tr><th>Name</th><th>Group</th></tr>
+  <tr><td>Ali</td><td>A1</td></tr>
+</table>
+        </div>
+      </div>
     </section>
-    <section class="tag">
-      <h2>&lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;</h2>
-      <h3>Definition</h3>
-      <p>Group the header, body and footer rows.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>(none)</td><td>Only global attributes</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;table&gt;
-  &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Item&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
-  &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Pen&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;
-  &lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;Total: 1&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;
+    <section class="tag-block" id="thead-tbody-tfoot">
+      <h3 class="tag-name">&lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Group the rows of a table into a header part, a body part and a footer part.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes; they help styling and accessibility.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Item&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Book&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Pen&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;&lt;td&gt;Total&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tfoot&gt;
 &lt;/table&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result"><table><thead><tr><th>Item</th></tr></thead><tbody><tr><td>Pen</td></tr></tbody><tfoot><tr><td>Total: 1</td></tr></tfoot></table></div>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<table class="demo-table">
+  <thead>
+    <tr><th>Item</th><th>Price</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Book</td><td>10</td></tr>
+    <tr><td>Pen</td><td>2</td></tr>
+  </tbody>
+  <tfoot>
+    <tr><td>Total</td><td>12</td></tr>
+  </tfoot>
+</table>
+        </div>
+      </div>
     </section>
-    <section class="tag">
-      <h2>colspan and rowspan</h2>
-      <h3>Definition</h3>
-      <p>Attributes of th/td that merge cells.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>colspan</td><td>Number of columns to merge</td></tr>
-        <tr><td>rowspan</td><td>Number of rows to merge</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;table&gt;
-  &lt;tr&gt;&lt;th colspan="2"&gt;Merged&lt;/th&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;/tr&gt;
+    <section class="tag-block" id="colspan-and-rowspan">
+      <h3 class="tag-name">colspan and rowspan</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Attributes that merge cells horizontally (<code>colspan</code>) or vertically (<code>rowspan</code>).</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>colspan</code></td><td>Merges the cell with the next cells of the same row.</td></tr>
+          <tr><td><code>rowspan</code></td><td>Merges the cell with the cells below it.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th colspan=&quot;2&quot;&gt;Schedule&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td rowspan=&quot;2&quot;&gt;Monday&lt;/td&gt;
+    &lt;td&gt;HTML&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;CSS&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;/table&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result"><table><tr><th colspan="2">Merged</th></tr><tr><td>A</td><td>B</td></tr></table></div>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<table class="demo-table">
+  <tr>
+    <th colspan="2">Schedule</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Monday</td>
+    <td>HTML</td>
+  </tr>
+  <tr>
+    <td>CSS</td>
+  </tr>
+</table>
+        </div>
+      </div>
     </section>
+
   </main>
-  <footer>
-    <p>Lab work 3 | Project by Student 1 and Student 2 | Amity Tashkent</p>
+  <footer class="site-footer">
+    <p>&copy; 2026 HTML Review Project &ndash; Lab work 3, Amity University Tashkent</p>
   </footer>
 </body>
 </html>

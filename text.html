@@ -3,104 +3,316 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML review website: Text Formatting Tags">
   <title>Text Formatting Tags | HTML Review</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>HTML Review: Text Formatting Tags</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="text.html" class="active">Text</a>
-      <a href="links.html">Links</a>
-      <a href="lists.html">Lists</a>
-      <a href="tables.html">Tables</a>
-      <a href="forms.html">Forms</a>
-      <a href="media.html">Media</a>
-      <a href="semantic.html">Semantic</a>
-      <a href="metadata.html">Metadata</a>
-    </nav>
+  <header class="site-header">
+    <h1>HTML Review Website</h1>
+    <p>Main HTML tags: definition, attributes and examples</p>
   </header>
-  <main>
-    <p class="intro">Tags that structure and format text.</p>
-    <section class="tag">
-      <h2>&lt;h1&gt; – &lt;h6&gt;</h2>
-      <h3>Definition</h3>
-      <p>Headings from the most important (h1) to the least important (h6).</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>id</td><td>Anchor target for links</td></tr>
-        <tr><td>class</td><td>CSS class</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;h1&gt;Title&lt;/h1&gt;
-&lt;h2&gt;Subtitle&lt;/h2&gt;
-&lt;h3&gt;Section&lt;/h3&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result"><h1>Title</h1><h2>Subtitle</h2><h3>Section</h3></div>
+  <nav class="site-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="text.html" class="active">Text</a></li>
+        <li><a href="links.html">Links</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="semantic.html">Semantic</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+    </ul>
+  </nav>
+  <main class="content">
+    <h2 class="page-title">Text Formatting Tags</h2>
+    <p class="intro">Tags used to structure and format text: headings, paragraphs, emphasis, quotations and code.</p>
+    <section class="tag-block" id="h1-to-h6">
+      <h3 class="tag-name">&lt;h1&gt; to &lt;h6&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Headings. <code>h1</code> is the most important title and <code>h6</code> the least important. Use only one <code>h1</code> per page.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>id</code></td><td>Unique identifier, used as an anchor target or for CSS.</td></tr>
+          <tr><td><code>class</code></td><td>Name of a CSS class used to style the heading.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+        </div>
+      </div>
     </section>
-    <section class="tag">
-      <h2>&lt;p&gt;</h2>
-      <h3>Definition</h3>
-      <p>Defines a paragraph of text.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>class</td><td>CSS class</td></tr>
-        <tr><td>title</td><td>Tooltip on hover</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;p title="Info"&gt;A paragraph.&lt;/p&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result"><p title="Info">A paragraph.</p></div>
+    <section class="tag-block" id="p">
+      <h3 class="tag-name">&lt;p&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Defines a paragraph of text. Browsers add space before and after it.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>class</code></td><td>CSS class name for styling.</td></tr>
+          <tr><td><code>id</code></td><td>Unique identifier of the paragraph.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<p>This is a paragraph of text.</p>
+        </div>
+      </div>
     </section>
-    <section class="tag">
-      <h2>&lt;strong&gt; and &lt;em&gt;</h2>
-      <h3>Definition</h3>
-      <p>strong = important text (bold). em = emphasized text (italic).</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>class</td><td>CSS class</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt; and &lt;em&gt;stressed&lt;/em&gt;.&lt;/p&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result"><p><strong>Important</strong> and <em>stressed</em>.</p></div>
+    <section class="tag-block" id="br-and-hr">
+      <h3 class="tag-name">&lt;br&gt; and &lt;hr&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p><code>br</code> inserts a line break. <code>hr</code> draws a horizontal line to separate thematic parts. Both are empty (void) tags.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>(none)</code></td><td>Neither tag needs a closing tag or specific attributes.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;p&gt;First line&lt;br&gt;Second line&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Text after the line&lt;/p&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<p>First line<br>Second line</p>
+<hr>
+<p>Text after the line</p>
+        </div>
+      </div>
     </section>
-    <section class="tag">
-      <h2>&lt;br&gt; and &lt;hr&gt;</h2>
-      <h3>Definition</h3>
-      <p>br = line break. hr = horizontal line between topics.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>(none)</td><td>Void tags: no closing tag</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>Line 1&lt;br&gt;Line 2
-&lt;hr&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result">Line 1<br>Line 2<hr></div>
+    <section class="tag-block" id="strong-and-em">
+      <h3 class="tag-name">&lt;strong&gt; and &lt;em&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p><code>strong</code> marks text of strong importance (usually bold). <code>em</code> marks emphasized text (usually italic).</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>class</code></td><td>CSS class name for styling.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;p&gt;This is &lt;strong&gt;very important&lt;/strong&gt; and &lt;em&gt;emphasized&lt;/em&gt;.&lt;/p&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<p>This is <strong>very important</strong> and <em>emphasized</em>.</p>
+        </div>
+      </div>
     </section>
-    <section class="tag">
-      <h2>&lt;blockquote&gt;</h2>
-      <h3>Definition</h3>
-      <p>A long quotation from another source.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>cite</td><td>URL of the quote's source</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;blockquote cite="https://example.com"&gt;A quote.&lt;/blockquote&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result"><blockquote cite="https://example.com">A quote.</blockquote></div>
+    <section class="tag-block" id="b-i-u-mark-small">
+      <h3 class="tag-name">&lt;b&gt;, &lt;i&gt;, &lt;u&gt;, &lt;mark&gt;, &lt;small&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Visual formatting tags: bold, italic, underlined, highlighted and smaller text.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>class</code></td><td>CSS class name for styling.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;p&gt;&lt;b&gt;Bold&lt;/b&gt;, &lt;i&gt;italic&lt;/i&gt;, &lt;u&gt;underline&lt;/u&gt;, &lt;mark&gt;highlighted&lt;/mark&gt;, &lt;small&gt;small text&lt;/small&gt;.&lt;/p&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<p><b>Bold</b>, <i>italic</i>, <u>underline</u>, <mark>highlighted</mark>, <small>small text</small>.</p>
+        </div>
+      </div>
     </section>
+    <section class="tag-block" id="sub-and-sup">
+      <h3 class="tag-name">&lt;sub&gt; and &lt;sup&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Subscript (lowered) and superscript (raised) text, used in formulas and footnotes.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>class</code></td><td>CSS class name for styling.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;p&gt;Water: H&lt;sub&gt;2&lt;/sub&gt;O &amp;nbsp; Area: 5 m&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<p>Water: H<sub>2</sub>O &nbsp; Area: 5 m<sup>2</sup></p>
+        </div>
+      </div>
+    </section>
+    <section class="tag-block" id="blockquote-and-q">
+      <h3 class="tag-name">&lt;blockquote&gt; and &lt;q&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p><code>blockquote</code> is a long quotation displayed as a separate block. <code>q</code> is a short inline quotation with quotation marks.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>cite</code></td><td>URL of the source of the quotation.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;blockquote cite=&quot;https://developer.mozilla.org&quot;&gt;
+  HTML is the standard markup language for web pages.
+&lt;/blockquote&gt;
+&lt;p&gt;He said: &lt;q&gt;Learning HTML is fun.&lt;/q&gt;&lt;/p&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<blockquote cite="https://developer.mozilla.org">
+  HTML is the standard markup language for web pages.
+</blockquote>
+<p>He said: <q>Learning HTML is fun.</q></p>
+        </div>
+      </div>
+    </section>
+    <section class="tag-block" id="code-and-pre">
+      <h3 class="tag-name">&lt;code&gt; and &lt;pre&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p><code>code</code> shows a piece of computer code. <code>pre</code> keeps spaces and line breaks exactly as written (preformatted text).</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>class</code></td><td>CSS class name for styling.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;pre&gt;&lt;code&gt;let x = 5;
+let y = 10;
+console.log(x + y);&lt;/code&gt;&lt;/pre&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<pre><code>let x = 5;
+let y = 10;
+console.log(x + y);</code></pre>
+        </div>
+      </div>
+    </section>
+    <section class="tag-block" id="span-and-div">
+      <h3 class="tag-name">&lt;span&gt; and &lt;div&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Generic containers with no meaning. <code>span</code> is inline (inside a line of text); <code>div</code> is a block (takes the full width).</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>class</code></td><td>CSS class used to style the container.</td></tr>
+          <tr><td><code>id</code></td><td>Unique identifier of the container.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;div class=&quot;box&quot;&gt;This is a div (block).&lt;/div&gt;
+&lt;p&gt;A word in &lt;span class=&quot;red&quot;&gt;red&lt;/span&gt; inside a paragraph.&lt;/p&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<div class="box">This is a div (block).</div>
+<p>A word in <span class="red">red</span> inside a paragraph.</p>
+        </div>
+      </div>
+    </section>
+
   </main>
-  <footer>
-    <p>Lab work 3 | Project by Student 1 and Student 2 | Amity Tashkent</p>
+  <footer class="site-footer">
+    <p>&copy; 2026 HTML Review Project &ndash; Lab work 3, Amity University Tashkent</p>
   </footer>
 </body>
 </html>

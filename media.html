@@ -3,80 +3,209 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML review website: Multimedia">
   <title>Multimedia | HTML Review</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>HTML Review: Multimedia</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="text.html">Text</a>
-      <a href="links.html">Links</a>
-      <a href="lists.html">Lists</a>
-      <a href="tables.html">Tables</a>
-      <a href="forms.html">Forms</a>
-      <a href="media.html" class="active">Media</a>
-      <a href="semantic.html">Semantic</a>
-      <a href="metadata.html">Metadata</a>
-    </nav>
+  <header class="site-header">
+    <h1>HTML Review Website</h1>
+    <p>Main HTML tags: definition, attributes and examples</p>
   </header>
-  <main>
-    <p class="intro">Tags that embed rich content.</p>
-    <section class="tag">
-      <h2>&lt;picture&gt; and &lt;source&gt;</h2>
-      <h3>Definition</h3>
-      <p>Lets the browser choose between several images.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>srcset</td><td>Image file(s) for the source</td></tr>
-        <tr><td>media</td><td>Condition, e.g. (min-width: 600px)</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;picture&gt;
-  &lt;source srcset="images/logo.svg" media="(min-width: 600px)"&gt;
-  &lt;img src="images/logo.svg" alt="Logo"&gt;
+  <nav class="site-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="text.html">Text</a></li>
+        <li><a href="links.html">Links</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="media.html" class="active">Media</a></li>
+        <li><a href="semantic.html">Semantic</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+    </ul>
+  </nav>
+  <main class="content">
+    <h2 class="page-title">Multimedia</h2>
+    <p class="intro">Tags used to embed pictures, frames, video and audio. The sample files are in the <code>images/</code> folder.</p>
+    <section class="tag-block" id="iframe">
+      <h3 class="tag-name">&lt;iframe&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Embeds another web page inside the current page.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>src</code></td><td>URL of the page to embed.</td></tr>
+          <tr><td><code>title</code></td><td>Description of the content (important for accessibility).</td></tr>
+          <tr><td><code>width</code></td><td>Width of the frame.</td></tr>
+          <tr><td><code>height</code></td><td>Height of the frame.</td></tr>
+          <tr><td><code>loading</code></td><td><code>lazy</code> loads the frame only when it is near the screen.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;iframe src=&quot;index.html&quot; title=&quot;Home page preview&quot; width=&quot;400&quot; height=&quot;200&quot;&gt;&lt;/iframe&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<iframe src="index.html" title="Home page preview" width="400" height="200"></iframe>
+        </div>
+      </div>
+    </section>
+    <section class="tag-block" id="figure-and-figcaption">
+      <h3 class="tag-name">&lt;figure&gt; and &lt;figcaption&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p><code>figure</code> wraps an illustration (image, diagram, code); <code>figcaption</code> is its caption.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes are used.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;figure&gt;
+  &lt;img src=&quot;images/sample.svg&quot; alt=&quot;Sample picture&quot; width=&quot;300&quot;&gt;
+  &lt;figcaption&gt;Figure 1 - A sample picture&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<figure>
+  <img src="images/sample.jpg" alt="Sample picture" width="300">
+  <figcaption>Figure 1 - A sample picture</figcaption>
+</figure>
+        </div>
+      </div>
+    </section>
+    <section class="tag-block" id="picture-and-source">
+      <h3 class="tag-name">&lt;picture&gt; and &lt;source&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Lets the browser choose between several image files, for example depending on the screen width.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>srcset</code></td><td>On <code>source</code>: the image file(s) to use.</td></tr>
+          <tr><td><code>media</code></td><td>On <code>source</code>: a media query that must be true to use the file.</td></tr>
+          <tr><td><code>src / alt</code></td><td>On the fallback <code>img</code> inside <code>picture</code>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;picture&gt;
+  &lt;source srcset=&quot;images/sample.svg&quot; media=&quot;(min-width: 600px)&quot;&gt;
+  &lt;img src=&quot;images/sample.svg&quot; alt=&quot;Responsive picture&quot; width=&quot;250&quot;&gt;
 &lt;/picture&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result"><picture><source srcset="images/logo.svg" media="(min-width: 600px)"><img src="images/logo.svg" alt="Logo"></picture></div>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<picture>
+  <source srcset="images/sample.svg" media="(min-width: 600px)">
+  <img src="images/sample.svg" alt="Responsive picture" width="250">
+</picture>
+        </div>
+      </div>
     </section>
-    <section class="tag">
-      <h2>&lt;iframe&gt;</h2>
-      <h3>Definition</h3>
-      <p>Embeds another web page inside this page.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>src</td><td>URL of the embedded page</td></tr>
-        <tr><td>width</td><td>Width</td></tr>
-        <tr><td>height</td><td>Height</td></tr>
-        <tr><td>title</td><td>Description for accessibility</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;iframe src="index.html" width="400" height="150" title="Home page"&gt;&lt;/iframe&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result"><iframe src="index.html" width="400" height="150" title="Home page"></iframe></div>
+    <section class="tag-block" id="video-with-source">
+      <h3 class="tag-name">&lt;video&gt; with &lt;source&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>Several formats of the same video can be offered with <code>source</code> tags; the browser plays the first one it supports.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>src</code></td><td>On <code>source</code>: path of the file.</td></tr>
+          <tr><td><code>type</code></td><td>On <code>source</code>: MIME type, for example <code>video/mp4</code>.</td></tr>
+          <tr><td><code>controls</code></td><td>On <code>video</code>: shows the player controls.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;video controls width=&quot;320&quot;&gt;
+  &lt;source src=&quot;images/sample.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<video controls width="320">
+  <source src="images/sample.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+        </div>
+      </div>
     </section>
-    <section class="tag">
-      <h2>&lt;canvas&gt;</h2>
-      <h3>Definition</h3>
-      <p>Area for drawing graphics with JavaScript.</p>
-      <h3>Attributes</h3>
-      <table>
-        <tr><th>Attribute</th><th>Role</th></tr>
-        <tr><td>width</td><td>Canvas width</td></tr>
-        <tr><td>height</td><td>Canvas height</td></tr>
-        <tr><td>id</td><td>Used by JavaScript to find it</td></tr>
-      </table>
-      <h3>Example (code)</h3>
-      <pre><code>&lt;canvas id="c" width="200" height="60"&gt;&lt;/canvas&gt;</code></pre>
-      <h3>Example (result)</h3>
-      <div class="result"><canvas id="c" width="200" height="60"></canvas></div>
+    <section class="tag-block" id="audio-with-source">
+      <h3 class="tag-name">&lt;audio&gt; with &lt;source&gt;</h3>
+      <div class="part">
+        <h4>Definition</h4>
+        <p>The same idea for sound files.</p>
+      </div>
+      <div class="part">
+        <h4>Attributes</h4>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Attribute</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+          <tr><td><code>src</code></td><td>On <code>source</code>: path of the file.</td></tr>
+          <tr><td><code>type</code></td><td>On <code>source</code>: MIME type, for example <code>audio/wav</code>.</td></tr>
+          <tr><td><code>controls</code></td><td>On <code>audio</code>: shows the player controls.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="part">
+        <h4>Example (code)</h4>
+        <pre><code>&lt;audio controls&gt;
+  &lt;source src=&quot;images/sample.wav&quot; type=&quot;audio/wav&quot;&gt;
+  Your browser does not support the audio tag.
+&lt;/audio&gt;</code></pre>
+      </div>
+      <div class="part">
+        <h4>Example (result)</h4>
+        <div class="result">
+<audio controls>
+  <source src="images/sample.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+        </div>
+      </div>
     </section>
+
   </main>
-  <footer>
-    <p>Lab work 3 | Project by Student 1 and Student 2 | Amity Tashkent</p>
+  <footer class="site-footer">
+    <p>&copy; 2026 HTML Review Project &ndash; Lab work 3, Amity University Tashkent</p>
   </footer>
 </body>
 </html>
